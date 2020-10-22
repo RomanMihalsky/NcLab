@@ -6,9 +6,16 @@ public class Client implements Person {
     private String surname;
     private String patronymic;
     private String gender;
-    private int phoneNumber;
+    private long phoneNumber;
     private int passportSeries;
     private int passportNumber;
+
+    public Client (){
+        this.name = "Ivan";
+        this.surname = "Ivanov";
+        this.surname = "Ivanovich";
+        this.gender = "men";
+    }
 
     public long getId() {
         return id;
@@ -50,11 +57,11 @@ public class Client implements Person {
         this.gender = gender;
     }
 
-    public int getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

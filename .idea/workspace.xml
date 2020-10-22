@@ -23,8 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2c6afd2-287c-484e-b64d-036718bbac65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/persons/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/persons/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -62,10 +63,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.nc.mihalsky.entities.persons" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
@@ -81,6 +92,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FirstLab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nc.mihalsky.entities.persons.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nc.mihalsky.entities.persons" />
+      <option name="MAIN_CLASS_NAME" value="com.nc.mihalsky.entities.persons.ClientTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ClientTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -121,10 +152,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="395" y="91" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1603280676602" />
-    <state x="249" y="0" key="#Project_Structure" timestamp="1603287040764">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1603370068566">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1603287040764" />
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1603370068566" />
     <state x="361" y="103" key="#Setter_Template" timestamp="1603293825948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -133,9 +164,53 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="468" y="35" key="#XML/0.0.1536.824@0.0.1536.824" timestamp="1603279629638" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1603294649634">
+    <state x="168" y="120" width="1200" height="584" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603373889173">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603294649634" />
+    <state x="168" y="120" width="1200" height="584" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1603373889173" />
+    <state x="408" y="93" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1603370378742">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="408" y="93" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603370378742" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1603369596551">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603369596551" />
+    <state width="1342" height="195" key="GridCell.Tab.0.bottom" timestamp="1603376146387">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603376146387" />
+    <state width="1342" height="195" key="GridCell.Tab.0.center" timestamp="1603376146386">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603376146386" />
+    <state width="1342" height="195" key="GridCell.Tab.0.left" timestamp="1603376146386">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603376146386" />
+    <state width="1342" height="195" key="GridCell.Tab.0.right" timestamp="1603376146387">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603376146387" />
+    <state width="1342" height="242" key="GridCell.Tab.1.bottom" timestamp="1603372369742">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="242" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603372369742" />
+    <state width="1342" height="242" key="GridCell.Tab.1.center" timestamp="1603372369742">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="242" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603372369742" />
+    <state width="1342" height="242" key="GridCell.Tab.1.left" timestamp="1603372369742">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="242" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603372369742" />
+    <state width="1342" height="242" key="GridCell.Tab.1.right" timestamp="1603372369742">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="242" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603372369742" />
+    <state x="533" y="96" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1603370542046">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="533" y="96" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1603370542046" />
   </component>
 </project>
