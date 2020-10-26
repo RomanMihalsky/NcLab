@@ -208,13 +208,47 @@ class ClientTest {
     }
 
     @Test
+    void getAge(){
+        client = new Client("Roman",
+                "Mihalsky",
+                "Alexandrovich",
+                "men",
+                2L,
+                1,
+                1,
+                new LocalDate(1999,10,12));
+
+        assertEquals(21,client.getAge().getYears(),"Fields didn't match");
+    }
+
+    @Test
     void testToString(){
-       assertEquals("Client{id=0, name='', surname='', patronymic='', gender='', phoneNumber=0', dateOfBirthDay=1900-01-01}",client.toString(),"Fields didn't match");
+       assertEquals("Client{id=0, " +
+               "name='', surname='', " +
+               "patronymic='', gender='', " +
+               "phoneNumber=0', " +
+               "dateOfBirthDay=1900-01-01}",client.toString(),
+               "Fields didn't match");
     }
 
     @Test
     void testToStringWithSecondConstructor(){
-        client = new Client(null,null,null,null,2L,1,1,new LocalDate(2010,2,3));
-        assertEquals("Client{id=0, name='', surname='', patronymic='', gender='', phoneNumber=2', dateOfBirthDay=2010-02-03}",client.toString(),"Fields didn't match");
+        client = new Client(
+                null,
+                null,
+                null,
+                null,
+                2L,
+                1,
+                1,
+                new LocalDate(2010,2,3));
+        assertEquals("Client{id=0," +
+                " name=''," +
+                " surname=''," +
+                " patronymic=''," +
+                " gender=''," +
+                " phoneNumber=2'," +
+                " dateOfBirthDay=2010-02-03}",client.toString(),
+                "Fields didn't match");
     }
 }

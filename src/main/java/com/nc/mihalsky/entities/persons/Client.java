@@ -1,6 +1,10 @@
 package com.nc.mihalsky.entities.persons;
 
+import com.sun.javafx.util.Logging;
 import org.joda.time.LocalDate;
+import org.joda.time.Years;
+
+import java.util.logging.Logger;
 
 public class Client implements Person {
     private  long id;
@@ -63,6 +67,11 @@ public class Client implements Person {
         this.phoneNumber = phoneNumber;
         this.passportSeries = passportSeries;
         this.passportNumber = passportNumber;
+    }
+
+    public Years getAge(){
+        LocalDate now = new LocalDate();
+        return Years.yearsBetween(getDateOfBirthDay(), now);
     }
 
     public long getId() {
