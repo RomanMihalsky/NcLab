@@ -11,10 +11,47 @@ public class Client implements Person {
     private int passportNumber;
 
     public Client (){
-        this.name = "Ivan";
-        this.surname = "Ivanov";
-        this.surname = "Ivanovich";
-        this.gender = "men";
+        this.name = "";
+        this.surname = "";
+        this.surname = "";
+        this.gender = "";
+    }
+
+    public Client (
+                   String name,
+                   String surname,
+                   String patronymic,
+                   String gender,
+                   long phoneNumber,
+                   int passportSeries,
+                   int passportNumber){
+        if (name != null){
+            this.name = name;
+        }else {
+            this.name = "";
+        }
+
+        if (surname != null){
+            this.surname = surname;
+        }else {
+            this.surname = "";
+        }
+
+        if (patronymic != null){
+            this.patronymic = patronymic;
+        }else {
+            this.patronymic = "";
+        }
+
+        if (gender != null){
+            this.gender = gender;
+        }else {
+            this.gender = "";
+        }
+
+        this.phoneNumber = phoneNumber;
+        this.passportSeries = passportSeries;
+        this.passportNumber = passportNumber;
     }
 
     public long getId() {
