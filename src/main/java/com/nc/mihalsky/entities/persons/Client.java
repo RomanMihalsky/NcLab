@@ -1,5 +1,7 @@
 package com.nc.mihalsky.entities.persons;
 
+import org.joda.time.LocalDate;
+
 public class Client implements Person {
     private  long id;
     private String name;
@@ -9,12 +11,14 @@ public class Client implements Person {
     private long phoneNumber;
     private int passportSeries;
     private int passportNumber;
+    private LocalDate dateOfBirthDay;
 
     public Client (){
         this.name = "";
         this.surname = "";
-        this.surname = "";
+        this.patronymic = "";
         this.gender = "";
+        this.dateOfBirthDay = new LocalDate(1900,1,1);
     }
 
     public Client (
@@ -24,7 +28,8 @@ public class Client implements Person {
                    String gender,
                    long phoneNumber,
                    int passportSeries,
-                   int passportNumber){
+                   int passportNumber,
+                   LocalDate dateOfBirthDay){
         if (name != null){
             this.name = name;
         }else {
@@ -47,6 +52,12 @@ public class Client implements Person {
             this.gender = gender;
         }else {
             this.gender = "";
+        }
+
+        if (dateOfBirthDay != null){
+            this.dateOfBirthDay = dateOfBirthDay;
+        }else {
+            this.dateOfBirthDay = new LocalDate(1900,1,1);
         }
 
         this.phoneNumber = phoneNumber;
@@ -118,6 +129,14 @@ public class Client implements Person {
         this.passportNumber = passportNumber;
     }
 
+    public LocalDate getDateOfBirthDay() {
+        return dateOfBirthDay;
+    }
+
+    public void setDateOfBirthDay(LocalDate dateOfBirthDay) {
+        this.dateOfBirthDay = dateOfBirthDay;
+    }
+
     @Override
     public String toString() {
         return "Client{" +
@@ -126,7 +145,8 @@ public class Client implements Person {
                 ", surname='" + surname + '\'' +
                 ", patronymic='" + patronymic + '\'' +
                 ", gender='" + gender + '\'' +
-                ", phoneNumber=" + phoneNumber +
+                ", phoneNumber=" + phoneNumber + '\'' +
+                ", dateOfBirthDay=" + dateOfBirthDay +
                 '}';
     }
 }

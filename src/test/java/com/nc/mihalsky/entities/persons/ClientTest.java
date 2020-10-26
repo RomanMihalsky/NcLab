@@ -1,5 +1,6 @@
 package com.nc.mihalsky.entities.persons;
 
+import org.joda.time.LocalDate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -185,7 +186,35 @@ class ClientTest {
     }
 
     @Test
+    void getDateOfBirthDay() throws NoSuchFieldException, IllegalAccessException {
+        Field field = client.getClass().getDeclaredField("dateOfBirthDay");
+        field.setAccessible(true);
+        LocalDate date = new LocalDate(1972,1,1);
+        field.set(client,date);
+
+        LocalDate result = client.getDateOfBirthDay();
+
+        assertEquals(new LocalDate(1972,1,1),result,"Fields didn't match");
+    }
+
+    @Test
+    void setDateOfBirthDay() throws NoSuchFieldException, IllegalAccessException {
+        client.setDateOfBirthDay(new LocalDate(1972,1,1));
+
+        Field field = client.getClass().getDeclaredField("dateOfBirthDay");
+        field.setAccessible(true);
+
+        assertEquals(new LocalDate(1972,1,1),field.get(client),"Fields didn't match");
+    }
+
+    @Test
     void testToString(){
-       assertEquals("Client{id=0, name='Ivan', surname='Ivanovich', patronymic='null', gender='men', phoneNumber=0}",client.toString(),"Fields didn't match");
+       assertEquals("Client{id=0, name='', surname='', patronymic='', gender='', phoneNumber=0', dateOfBirthDay=1900-01-01}",client.toString(),"Fields didn't match");
+    }
+
+    @Test
+    void testToStringWithSecondConstructor(){
+        client = new Client(null,null,null,null,2L,1,1,new LocalDate(2010,2,3));
+        assertEquals("Client{id=0, name='', surname='', patronymic='', gender='', phoneNumber=2', dateOfBirthDay=2010-02-03}",client.toString(),"Fields didn't match");
     }
 }
