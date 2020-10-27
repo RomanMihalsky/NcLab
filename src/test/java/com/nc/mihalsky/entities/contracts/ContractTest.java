@@ -2,11 +2,8 @@ package com.nc.mihalsky.entities.contracts;
 
 import com.nc.mihalsky.entities.persons.Client;
 import org.joda.time.LocalDate;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.lang.reflect.Field;
 
 import static org.junit.jupiter.api.Assertions.*;
 
