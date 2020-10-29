@@ -23,7 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2c6afd2-287c-484e-b64d-036718bbac65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/nc/mihalsky/entities/contracts/ContractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/nc/mihalsky/entities/contracts/ContractTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/MobileContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/MobileContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/persons/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/persons/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/nc/mihalsky/entities/persons/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/nc/mihalsky/entities/persons/ClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/nc/mihalsky/entities/contracts/ContractTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/nc/mihalsky/entities/contracts/ContractTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/nc/mihalsky/entities/contracts/ContractTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/nc/mihalsky/entities/contracts/ContractTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +40,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -78,16 +84,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ContractTest">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MobileContractTest">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,8 +126,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MobileContractTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FirstLab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nc.mihalsky.entities.contracts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nc.mihalsky.entities.contracts" />
+      <option name="MAIN_CLASS_NAME" value="com.nc.mihalsky.entities.contracts.MobileContractTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MobileTariffTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FirstLab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nc.mihalsky.entities.contracts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nc.mihalsky.entities.contracts" />
+      <option name="MAIN_CLASS_NAME" value="com.nc.mihalsky.entities.contracts.MobileTariffTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MobileContractTest" />
+        <item itemvalue="JUnit.MobileTariffTest" />
         <item itemvalue="JUnit.ContractTest" />
         <item itemvalue="JUnit.ClientTest" />
       </list>
@@ -143,6 +179,8 @@
       <workItem from="1603367181705" duration="412000" />
       <workItem from="1603699572339" duration="8234000" />
       <workItem from="1603802196427" duration="5563000" />
+      <workItem from="1603812558036" duration="2584000" />
+      <workItem from="1603961287103" duration="3116000" />
     </task>
     <servers />
   </component>
@@ -170,6 +208,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="395" y="91" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1603280676602" />
+    <state x="361" y="0" key="#Java" timestamp="1603969291625">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="0" key="#Java/0.0.1536.824@0.0.1536.824" timestamp="1603969291625" />
     <state x="249" y="0" key="#Project_Structure" timestamp="1603370068566">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -190,45 +232,45 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="408" y="93" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603370378742" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1603803659949">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1603969168447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603803659949" />
-    <state width="1342" height="178" key="GridCell.Tab.0.bottom" timestamp="1603807240587">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603969168447" />
+    <state width="1342" height="178" key="GridCell.Tab.0.bottom" timestamp="1603969931778">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="178" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603807240587" />
-    <state width="1342" height="178" key="GridCell.Tab.0.center" timestamp="1603807240586">
+    <state width="1342" height="178" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603969931778" />
+    <state width="1342" height="178" key="GridCell.Tab.0.center" timestamp="1603969931778">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="178" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603807240586" />
-    <state width="1342" height="178" key="GridCell.Tab.0.left" timestamp="1603807240586">
+    <state width="1342" height="178" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603969931778" />
+    <state width="1342" height="178" key="GridCell.Tab.0.left" timestamp="1603969931778">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="178" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603807240586" />
-    <state width="1342" height="178" key="GridCell.Tab.0.right" timestamp="1603807240587">
+    <state width="1342" height="178" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603969931778" />
+    <state width="1342" height="178" key="GridCell.Tab.0.right" timestamp="1603969931778">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="178" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603807240587" />
-    <state width="1342" height="242" key="GridCell.Tab.1.bottom" timestamp="1603805478166">
+    <state width="1342" height="178" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603969931778" />
+    <state width="1342" height="242" key="GridCell.Tab.1.bottom" timestamp="1603812432037">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="242" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603805478166" />
-    <state width="1342" height="242" key="GridCell.Tab.1.center" timestamp="1603805478166">
+    <state width="1342" height="242" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603812432037" />
+    <state width="1342" height="242" key="GridCell.Tab.1.center" timestamp="1603812432037">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="242" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603805478166" />
-    <state width="1342" height="242" key="GridCell.Tab.1.left" timestamp="1603805478166">
+    <state width="1342" height="242" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603812432037" />
+    <state width="1342" height="242" key="GridCell.Tab.1.left" timestamp="1603812432037">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="242" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603805478166" />
-    <state width="1342" height="242" key="GridCell.Tab.1.right" timestamp="1603805478166">
+    <state width="1342" height="242" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603812432037" />
+    <state width="1342" height="242" key="GridCell.Tab.1.right" timestamp="1603812432037">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="242" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603805478166" />
-    <state x="533" y="96" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1603803524443">
+    <state width="1342" height="242" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603812432037" />
+    <state x="533" y="96" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1603811756081">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="533" y="96" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1603803524443" />
+    <state x="533" y="96" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1603811756081" />
   </component>
 </project>

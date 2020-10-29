@@ -1,10 +1,7 @@
 package com.nc.mihalsky.entities.persons;
 
-import com.sun.javafx.util.Logging;
 import org.joda.time.LocalDate;
 import org.joda.time.Years;
-
-import java.util.logging.Logger;
 
 public class Client implements Person {
     private  long id;
@@ -25,7 +22,7 @@ public class Client implements Person {
         this.dateOfBirthDay = new LocalDate(1900,1,1);
     }
 
-    public Client (
+    public Client (long id,
                    String name,
                    String surname,
                    String patronymic,
@@ -63,7 +60,7 @@ public class Client implements Person {
         }else {
             this.dateOfBirthDay = new LocalDate(1900,1,1);
         }
-
+        this.id = id;
         this.phoneNumber = phoneNumber;
         this.passportSeries = passportSeries;
         this.passportNumber = passportNumber;

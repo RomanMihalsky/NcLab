@@ -209,7 +209,9 @@ class ClientTest {
 
     @Test
     void getAge(){
-        client = new Client("Roman",
+        client = new Client(
+                1L,
+                "Roman",
                 "Mihalsky",
                 "Alexandrovich",
                 "men",
@@ -234,6 +236,7 @@ class ClientTest {
     @Test
     void testToStringWithSecondConstructor(){
         client = new Client(
+                1L,
                 null,
                 null,
                 null,
@@ -242,7 +245,7 @@ class ClientTest {
                 1,
                 1,
                 new LocalDate(2010,2,3));
-        assertEquals("Client{id=0," +
+        assertEquals("Client{id=1," +
                 " name=''," +
                 " surname=''," +
                 " patronymic=''," +
