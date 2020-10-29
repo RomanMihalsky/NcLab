@@ -1,5 +1,6 @@
 package com.nc.mihalsky.entities.contracts;
 
+import com.nc.mihalsky.entities.contracts.enums.MobileTariff;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +20,7 @@ class MobileContractTest {
     void getTariff() throws NoSuchFieldException, IllegalAccessException{
         Field field = mobileContract.getClass().getDeclaredField("tariff");
         field.setAccessible(true);
-        field.set(mobileContract,MobileTariff.CHEAP);
+        field.set(mobileContract, MobileTariff.CHEAP);
 
         MobileTariff result = mobileContract.getTariff();
 
@@ -39,7 +40,8 @@ class MobileContractTest {
     @Test
     void testToString() {
         assertEquals("MobileContract{" +
-                "tariff=MobileTariff{gigabytes=4, smsAmount=15}," +
+                "tariff=MobileTariff{gigabytes=4," +
+                " smsAmount=15}," +
                 " id=0, dateStartOfUse=1900-01-01," +
                 " dateEndOfUse=1900-01-01, client=0}",
                 mobileContract.toString(),

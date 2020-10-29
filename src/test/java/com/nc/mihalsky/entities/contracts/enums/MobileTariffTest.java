@@ -1,5 +1,6 @@
-package com.nc.mihalsky.entities.contracts;
+package com.nc.mihalsky.entities.contracts.enums;
 
+import com.nc.mihalsky.entities.contracts.enums.MobileTariff;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

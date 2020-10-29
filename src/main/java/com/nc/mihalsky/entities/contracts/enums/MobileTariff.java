@@ -1,4 +1,4 @@
-package com.nc.mihalsky.entities.contracts;
+package com.nc.mihalsky.entities.contracts.enums;
 
 public enum MobileTariff {
     CHEAP(4,15),MEDIUM(20,100),EXPENSIVE(40,200);

@@ -1,5 +1,6 @@
 package com.nc.mihalsky.entities.contracts;
 
+import com.nc.mihalsky.entities.contracts.enums.MobileTariff;
 import com.nc.mihalsky.entities.persons.Client;
 import org.joda.time.LocalDate;
 
