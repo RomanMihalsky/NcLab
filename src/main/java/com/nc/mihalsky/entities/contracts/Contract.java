@@ -3,6 +3,8 @@ package com.nc.mihalsky.entities.contracts;
 import com.nc.mihalsky.entities.persons.Client;
 import org.joda.time.LocalDate;
 
+import java.util.Objects;
+
 public abstract class Contract {
     protected long id;
     protected LocalDate dateStartOfUse;
@@ -42,4 +44,20 @@ public abstract class Contract {
     }
 
     abstract public String toString();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Contract contract = (Contract) o;
+        return id == contract.id &&
+                Objects.equals(dateStartOfUse, contract.dateStartOfUse) &&
+                Objects.equals(dateEndOfUse, contract.dateEndOfUse) &&
+                Objects.equals(client, contract.client);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, dateStartOfUse, dateEndOfUse, client);
+    }
 }

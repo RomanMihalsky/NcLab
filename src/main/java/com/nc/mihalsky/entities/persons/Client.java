@@ -3,6 +3,8 @@ package com.nc.mihalsky.entities.persons;
 import org.joda.time.LocalDate;
 import org.joda.time.Years;
 
+import java.util.Objects;
+
 public class Client implements Person {
     private  long id;
     private String name;
@@ -141,6 +143,35 @@ public class Client implements Person {
 
     public void setDateOfBirthDay(LocalDate dateOfBirthDay) {
         this.dateOfBirthDay = dateOfBirthDay;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Client client = (Client) o;
+        return id == client.id &&
+                phoneNumber == client.phoneNumber &&
+                passportSeries == client.passportSeries &&
+                passportNumber == client.passportNumber &&
+                Objects.equals(name, client.name) &&
+                Objects.equals(surname, client.surname) &&
+                Objects.equals(patronymic, client.patronymic) &&
+                Objects.equals(gender, client.gender) &&
+                Objects.equals(dateOfBirthDay, client.dateOfBirthDay);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id,
+                name,
+                surname,
+                patronymic,
+                gender,
+                phoneNumber,
+                passportSeries,
+                passportNumber,
+                dateOfBirthDay);
     }
 
     @Override
