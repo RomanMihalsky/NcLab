@@ -6,11 +6,11 @@ import java.util.Optional;
 
 public class SimpleArray<E> implements SimpleList<E> {
 
-  private E[] values;
+  private Object[] values;
   private int size;
 
   public SimpleArray(){
-    this.values = (E[]) new Object [1];
+    this.values = new Object [1];
   }
 
   @Override
@@ -38,7 +38,7 @@ public class SimpleArray<E> implements SimpleList<E> {
     }
 
     values[index] = null;
-    values = (E[])Arrays.stream(values).filter(a -> a!=null).toArray();
+    values = Arrays.stream(values).filter(a -> a!=null).toArray();
     return Optional.of(true);
   }
 
@@ -47,7 +47,7 @@ public class SimpleArray<E> implements SimpleList<E> {
     if((index<0) || (index>size)){
       return Optional.empty();
     }
-    return Optional.of(values[index]);
+    return Optional.of((E)values[index]);
   }
 
   @Override

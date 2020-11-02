@@ -24,11 +24,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f2c6afd2-287c-484e-b64d-036718bbac65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/entities/contracts/Contract.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/entities/contracts/Contract.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/entities/contracts/InternetContract.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/entities/contracts/InternetContract.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/entities/contracts/MobileContract.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/entities/contracts/MobileContract.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/entities/contracts/TvContract.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/entities/contracts/TvContract.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/entities/persons/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/entities/persons/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/ArrayIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/ArrayIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/SimpleArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/SimpleArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/nc/mihalsky/entities/contracts/InternetContractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/nc/mihalsky/entities/contracts/InternetContractTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/nc/mihalsky/entities/contracts/MobileContractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/nc/mihalsky/entities/contracts/MobileContractTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/nc/mihalsky/entities/contracts/TvContractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/nc/mihalsky/entities/contracts/TvContractTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/simple/ArrayIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/simple/ArrayIterator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/simple/SimpleArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nc/mihalsky/simple/SimpleArray.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +41,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -77,8 +79,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.nc.mihalsky.factories" />
       <recent name="com.nc.mihalsky.simple" />
+      <recent name="com.nc.mihalsky.factories" />
       <recent name="com.nc.mihalsky.entities.contracts" />
       <recent name="com.nc.mihalsky.entities.contracts.enums" />
       <recent name="com.nc.mihalsky.entities.persons" />
@@ -90,101 +92,99 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FactoryContractTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in FirstLab">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in FirstLab" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FirstLab" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.nc.mihalsky.entities.persons.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.nc.mihalsky.entities.persons" />
-      <option name="MAIN_CLASS_NAME" value="com.nc.mihalsky.entities.persons.ClientTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FactoryClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SimpleArrayContractTest.changeSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FirstLab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.nc.mihalsky.factories.*" />
+          <option name="PATTERN" value="com.nc.mihalsky.simple.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.nc.mihalsky.factories" />
-      <option name="MAIN_CLASS_NAME" value="com.nc.mihalsky.factories.FactoryClientTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FactoryClientTest.testCreateClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FirstLab" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.nc.mihalsky.factories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.nc.mihalsky.factories" />
-      <option name="MAIN_CLASS_NAME" value="com.nc.mihalsky.factories.FactoryClientTest" />
-      <option name="METHOD_NAME" value="testCreateClient" />
+      <option name="PACKAGE_NAME" value="com.nc.mihalsky.simple" />
+      <option name="MAIN_CLASS_NAME" value="com.nc.mihalsky.simple.SimpleArrayContractTest" />
+      <option name="METHOD_NAME" value="changeSize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FactoryContractTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SimpleArrayContractTest.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FirstLab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.nc.mihalsky.factories.*" />
+          <option name="PATTERN" value="com.nc.mihalsky.simple.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.nc.mihalsky.factories" />
-      <option name="MAIN_CLASS_NAME" value="com.nc.mihalsky.factories.FactoryContractTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.nc.mihalsky.simple" />
+      <option name="MAIN_CLASS_NAME" value="com.nc.mihalsky.simple.SimpleArrayContractTest" />
+      <option name="METHOD_NAME" value="get" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GeneratorIDTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SimpleArrayContractTest.set" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FirstLab" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.nc.mihalsky.factories.*" />
+          <option name="PATTERN" value="com.nc.mihalsky.simple.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.nc.mihalsky.factories" />
-      <option name="MAIN_CLASS_NAME" value="com.nc.mihalsky.factories.GeneratorIDTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.nc.mihalsky.simple" />
+      <option name="MAIN_CLASS_NAME" value="com.nc.mihalsky.simple.SimpleArrayContractTest" />
+      <option name="METHOD_NAME" value="set" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleArrayContractTest.size" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FirstLab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nc.mihalsky.simple.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nc.mihalsky.simple" />
+      <option name="MAIN_CLASS_NAME" value="com.nc.mihalsky.simple.SimpleArrayContractTest" />
+      <option name="METHOD_NAME" value="size" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FactoryContractTest" />
-        <item itemvalue="JUnit.FactoryClientTest" />
-        <item itemvalue="JUnit.FactoryClientTest.testCreateClient" />
-        <item itemvalue="JUnit.ClientTest" />
-        <item itemvalue="JUnit.GeneratorIDTest" />
+        <item itemvalue="JUnit.All in FirstLab" />
+        <item itemvalue="JUnit.SimpleArrayContractTest.changeSize" />
+        <item itemvalue="JUnit.SimpleArrayContractTest.size" />
+        <item itemvalue="JUnit.SimpleArrayContractTest.set" />
+        <item itemvalue="JUnit.SimpleArrayContractTest.get" />
       </list>
     </recent_temporary>
   </component>
@@ -206,6 +206,7 @@
       <workItem from="1603961287103" duration="17193000" />
       <workItem from="1604037869357" duration="17410000" />
       <workItem from="1604219095349" duration="2331000" />
+      <workItem from="1604306546427" duration="13766000" />
     </task>
     <servers />
   </component>
@@ -257,30 +258,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="408" y="93" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603370378742" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1604235808325">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1604312989039">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1604235808325" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1604312989039" />
     <state x="537" y="281" width="462" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1603971087649">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="537" y="281" width="462" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1603971087649" />
-    <state width="1342" height="180" key="GridCell.Tab.0.bottom" timestamp="1604238665060">
+    <state width="1342" height="180" key="GridCell.Tab.0.bottom" timestamp="1604323931727">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="180" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604238665060" />
-    <state width="1342" height="180" key="GridCell.Tab.0.center" timestamp="1604238665060">
+    <state width="1342" height="180" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604323931727" />
+    <state width="1342" height="180" key="GridCell.Tab.0.center" timestamp="1604323931727">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="180" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604238665060" />
-    <state width="1342" height="180" key="GridCell.Tab.0.left" timestamp="1604238665059">
+    <state width="1342" height="180" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604323931727" />
+    <state width="1342" height="180" key="GridCell.Tab.0.left" timestamp="1604323931726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="180" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604238665059" />
-    <state width="1342" height="180" key="GridCell.Tab.0.right" timestamp="1604238665060">
+    <state width="1342" height="180" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604323931726" />
+    <state width="1342" height="180" key="GridCell.Tab.0.right" timestamp="1604323931727">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="180" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604238665060" />
+    <state width="1342" height="180" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604323931727" />
     <state width="1342" height="242" key="GridCell.Tab.1.bottom" timestamp="1603812432037">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -301,9 +302,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="580" y="133" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603987641248" />
-    <state x="533" y="96" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1604237592308">
+    <state x="533" y="96" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1604317045788">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="533" y="96" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1604237592308" />
+    <state x="533" y="96" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1604317045788" />
   </component>
 </project>

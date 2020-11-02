@@ -1,6 +1,7 @@
 package com.nc.mihalsky.entities.contracts;
 
 import com.nc.mihalsky.entities.contracts.enums.MobileTariff;
+import com.nc.mihalsky.entities.persons.Client;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -38,12 +39,28 @@ class MobileContractTest {
     }
 
     @Test
-    void testToString() {
-        assertEquals("MobileContract{" +
-                "tariff=MobileTariff{gigabytes=4," +
-                " smsAmount=15}," +
-                " id=0, dateStartOfUse=1900-01-01," +
-                " dateEndOfUse=1900-01-01, client=0}",
+    void testToString() throws NoSuchFieldException, IllegalAccessException {
+        Field fieldTariff = mobileContract.getClass().getDeclaredField("tariff");
+        fieldTariff.setAccessible(true);
+        Field fieldId = Contract.class.getDeclaredField("id");
+        fieldId.setAccessible(true);
+        Field fieldDateStartOfUse = Contract.class.getDeclaredField("dateStartOfUse");
+        fieldDateStartOfUse.setAccessible(true);
+        Field fieldDateEndOfUse = Contract.class.getDeclaredField("dateEndOfUse");
+        fieldDateEndOfUse.setAccessible(true);
+
+        Field fieldClient = Contract.class.getDeclaredField("client");
+        fieldClient.setAccessible(true);
+
+        Field fieldClientId = ((Client)fieldClient.get(mobileContract)).getClass().getDeclaredField("id");
+        fieldClientId.setAccessible(true);
+
+
+        assertEquals("MobileContract{tariff="+fieldTariff.get(mobileContract)+"," +
+                        " id="+ fieldId.get(mobileContract)+"," +
+                        " dateStartOfUse="+ fieldDateStartOfUse.get(mobileContract) +"," +
+                        " dateEndOfUse="+ fieldDateEndOfUse.get(mobileContract) +"," +
+                        " client="+ fieldClientId.get(((Client)fieldClient.get(mobileContract))) +"}",
                 mobileContract.toString(),
                 "Fields didn't match");
     }

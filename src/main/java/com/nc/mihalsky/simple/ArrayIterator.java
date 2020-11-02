@@ -4,9 +4,9 @@ import java.util.Iterator;
 
 public class ArrayIterator<E> implements Iterator<E> {
   private int index = 0;
-  private E[] values;
+  private Object[] values;
 
-  public ArrayIterator(E[] values){
+  public ArrayIterator(Object[] values){
     this.values = values;
   }
 
@@ -17,6 +17,6 @@ public class ArrayIterator<E> implements Iterator<E> {
 
   @Override
   public E next() {
-    return values[index ++];
+    return (E)values[index ++];
   }
 }
