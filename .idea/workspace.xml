@@ -24,11 +24,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f2c6afd2-287c-484e-b64d-036718bbac65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/FactoryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/FactoryClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/FactoryContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/FactoryContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/GeneratorID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/GeneratorID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/ArrayIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/ArrayIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/SimpleArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/SimpleArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/SimpleArrayContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/SimpleArrayContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/SimpleList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/SimpleList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/SimpleListContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/simple/SimpleListContract.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +91,19 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.All in FirstLab">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in FirstLab" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FirstLab" />
       <option name="PACKAGE_NAME" value="" />
@@ -193,7 +206,7 @@
       <workItem from="1604219095349" duration="2331000" />
       <workItem from="1604306546427" duration="14472000" />
       <workItem from="1604408445937" duration="7589000" />
-      <workItem from="1604427129920" duration="1904000" />
+      <workItem from="1604427129920" duration="5581000" />
     </task>
     <servers />
   </component>

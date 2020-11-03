@@ -6,15 +6,31 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Optional;
 
+/**
+ *Класс SimpleArrayContract позволяет хранить в себе
+ *различные объекты, наследуемые от <tt>Contract</tt>.
+ *Имеет параметры: <b>values</b>,<b>size</b>
+ *@author Roman Mihalsky
+ */
 public class SimpleArrayContract<E extends Contract> implements SimpleListContract<E>{
-
+  /**Поле список элементов*/
   private Object[] values;
+  /**Поле размер списка {@link SimpleArrayContract#values}*/
   private int size;
 
+  /**Конструктор для создания нового объекта SimpleArrayContract
+   *Полю {@link SimpleArrayContract#values} присваивает новый массив
+   *типа <tt>Object</tt> размером 1
+   */
   public SimpleArrayContract(){
     this.values = new Object [1];
   }
 
+  /**Функция для добавления элемента
+   * @param e - элемент
+   * @return true если добавление прошло успешно
+   * @return false если добавление прошло неуспешно
+   */
   @Override
   public boolean add(E e) {
     checkSize();
@@ -23,16 +39,28 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
     return true;
   }
 
+  /**Функция проверяет размер списка {@link SimpleArrayContract#values}
+   * на возможность добавить новый элемент
+   */
   private void checkSize() {
     if(size == values.length){
       changeSize();
     }
   }
 
+  /**Функция увеличевает размер списка {@link SimpleArrayContract#values}
+   * на один элемент
+   */
   private void changeSize() {
     values = Arrays.copyOf(values,size+1);
   }
 
+  /**Функция удаляет элемент из списка {@link SimpleArrayContract#values}
+   * по id элемента
+   * @param id - id элемента
+   * @return Optional true если удаление прошло успешно
+   * @return Optional.empty если удаление прошло неуспешно
+   */
   @Override
   public Optional<Boolean> delete(long id) {
     for (int i = 0;i < values.length;i ++) {
@@ -45,6 +73,11 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
     return Optional.empty();
   }
 
+  /**Функция для получения элемента по id из писка {@link SimpleArrayContract#values}
+   * @param id - id элемента
+   * @return Optional E если объект под таким id существует
+   * @return Optional.empty если объект под таким id не существует
+   */
   @Override
   public Optional<E> get(long id) {
     for (int i = 0;i < values.length;i ++) {
@@ -55,6 +88,13 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
     return Optional.empty();
   }
 
+  /**Функция заменяет элемент под @param id из писка {@link SimpleArrayContract#values}
+   * на элемент @param e
+   * @param e - элемент
+   * @param id - id элемента
+   * @return Optional true если замена прошла успешно
+   * @return Optional.empty Optional true если удаление прошло неуспешно
+   */
   @Override
   public Optional<Boolean> set(long id, E e) {
     for (int i = 0;i < values.length;i ++) {
@@ -66,16 +106,23 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
     return Optional.empty();
   }
 
+  /**Функция размер списка {@link SimpleArrayContract#values}
+   * @return int
+   */
   @Override
   public int size() {
     return values.length;
   }
 
+  /**Функция создает новый ArrayIterator с аргументом {@link SimpleArrayContract#values}*/
   @Override
   public Iterator<E> iterator() {
     return new ArrayIterator<>(values);
   }
 
+  /**
+   * Функция для приведения списка {@link SimpleArrayContract#values} к строке
+   */
   @Override
   public String toString() {
     return Arrays.toString(values);
