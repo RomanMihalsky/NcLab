@@ -23,9 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2c6afd2-287c-484e-b64d-036718bbac65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/enums/InternetTariff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/enums/InternetTariff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/enums/MobileTariff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/enums/MobileTariff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/enums/TvTariff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/enums/TvTariff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/FactoryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/FactoryClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/FactoryContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/FactoryContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/GeneratorID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/factories/GeneratorID.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,17 +91,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.All in FirstLab">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="All in FirstLab" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FirstLab" />
       <option name="PACKAGE_NAME" value="" />
@@ -200,7 +192,8 @@
       <workItem from="1604037869357" duration="17410000" />
       <workItem from="1604219095349" duration="2331000" />
       <workItem from="1604306546427" duration="14472000" />
-      <workItem from="1604408445937" duration="7494000" />
+      <workItem from="1604408445937" duration="7589000" />
+      <workItem from="1604427129920" duration="1904000" />
     </task>
     <servers />
   </component>
@@ -260,22 +253,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="537" y="281" width="462" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1603971087649" />
-    <state width="1342" height="180" key="GridCell.Tab.0.bottom" timestamp="1604325625720">
+    <state width="1342" height="180" key="GridCell.Tab.0.bottom" timestamp="1604416050110">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="180" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604325625720" />
-    <state width="1342" height="180" key="GridCell.Tab.0.center" timestamp="1604325625720">
+    <state width="1342" height="180" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604416050110" />
+    <state width="1342" height="180" key="GridCell.Tab.0.center" timestamp="1604416050110">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="180" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604325625720" />
-    <state width="1342" height="180" key="GridCell.Tab.0.left" timestamp="1604325625720">
+    <state width="1342" height="180" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604416050110" />
+    <state width="1342" height="180" key="GridCell.Tab.0.left" timestamp="1604416050110">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="180" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604325625720" />
-    <state width="1342" height="180" key="GridCell.Tab.0.right" timestamp="1604325625720">
+    <state width="1342" height="180" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604416050110" />
+    <state width="1342" height="180" key="GridCell.Tab.0.right" timestamp="1604416050110">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="180" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604325625720" />
+    <state width="1342" height="180" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604416050110" />
     <state width="1342" height="242" key="GridCell.Tab.1.bottom" timestamp="1603812432037">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

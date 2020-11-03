@@ -11,14 +11,26 @@ import org.joda.time.LocalDate;
 
 import java.util.logging.Logger;
 
+/**
+ *Класс FactoryContract со свойствами <b>generatorID</b>,<b>logger</b>
+ * @author Roman Mihalsky
+ */
 public class FactoryContract implements Factory{
+  /**Статическое поле генератор id*/
   private GeneratorID generatorID;
+  /**Статическое поле logger для вывода информации в консоль*/
   private Logger logger = Logger.getLogger("Logger");
 
+  /**Конструктор для создания FactoryContract с созданием нового генератора id*/
   public FactoryContract (){
     generatorID = new GeneratorID();
   }
 
+  /**
+   * Функция создания интернет контракта {@link InternetContract} с default значениями
+   * и генерацией id.
+   * @return новый объект типа {@link InternetContract}
+   */
   public InternetContract createInternetContract(){
     InternetContract internetContract = new InternetContract();
     internetContract.setId(generatorID.generate());
@@ -26,6 +38,14 @@ public class FactoryContract implements Factory{
     return internetContract;
   }
 
+  /**
+   * Функция создания интернет контракта {@link InternetContract} с параметрами и генерацией id
+   * @param dateStartOfUse - дата создания контракта
+   * @param dateEndOfUse - дата заершения контракта
+   * @param client - клиент
+   * @param tariff - тариф на интернет
+   * @return новый объект типа {@link InternetContract}
+   */
   public InternetContract createInternetContract(LocalDate dateStartOfUse,
                                                  LocalDate dateEndOfUse,
                                                  Client client,
@@ -41,6 +61,11 @@ public class FactoryContract implements Factory{
     return internetContract;
   }
 
+  /**
+   * Функция создания контракта на мобильнкю связь {@link MobileContract} с default значениями
+   * и генерацией id.
+   * @return новый объект типа {@link MobileContract}
+   */
   public MobileContract createMobileContract(){
     MobileContract mobileContract = new MobileContract();
     mobileContract.setId(generatorID.generate());
@@ -48,6 +73,14 @@ public class FactoryContract implements Factory{
     return mobileContract;
   }
 
+  /**
+   * Функция создания контракта на мобильнкю связь{@link MobileContract} с параметрами и генерацией id
+   * @param dateStartOfUse - дата создания контракта
+   * @param dateEndOfUse - дата заершения контракта
+   * @param client - клиент
+   * @param tariff - тариф на мобильную связь
+   * @return новый объект типа {@link MobileContract}
+   */
   public MobileContract createMobileContract(LocalDate dateStartOfUse,
                                              LocalDate dateEndOfUse,
                                              Client client,
@@ -63,6 +96,11 @@ public class FactoryContract implements Factory{
     return mobileContract;
   }
 
+  /**
+   * Функция создания контракта на телевидение {@link TvContract} с default значениями
+   * и генерацией id.
+   * @return новый объект типа {@link TvContract}
+   */
   public TvContract createTvContract(){
     TvContract tvContract = new TvContract();
     tvContract.setId(generatorID.generate());
@@ -70,6 +108,14 @@ public class FactoryContract implements Factory{
     return tvContract;
   }
 
+  /**
+   * Функция создания контракта на телевидение{@link TvContract} с параметрами и генерацией id
+   * @param dateStartOfUse - дата создания контракта
+   * @param dateEndOfUse - дата заершения контракта
+   * @param client - клиент
+   * @param tariff - тариф на телевидение
+   * @return новый объект типа {@link TvContract}
+   */
   public TvContract createTvContract(LocalDate dateStartOfUse,
                                      LocalDate dateEndOfUse,
                                      Client client,
