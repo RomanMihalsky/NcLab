@@ -7,9 +7,18 @@ import org.joda.time.LocalDate;
 
 import java.util.Objects;
 
+/**
+ * Класс InternetContract со свойствами <b>id</b>,<b>dateStartOfUse</b>,
+ * <b>dateEndOfUse</b>,<b>client</b>,<b>tariff</b>
+ * Является наследником абстрактого класса <tt>Contract</tt>.
+ * Реализует метод {@link InternetContract#toString()}.
+ * @author Roman Mihalsky
+ */
 public class InternetContract extends Contract{
+  /**Поле тариф на интренет*/
   private InternetTariff tariff;
 
+  /**Конструктор для создания контракта на интернет с default значениями*/
   public InternetContract (){
     this.dateStartOfUse = new LocalDate(1900,1,1);
     this.dateEndOfUse = new LocalDate(1900,1,1);
@@ -17,6 +26,14 @@ public class InternetContract extends Contract{
     this.tariff = InternetTariff.MEGAS;
   }
 
+  /**Конструкто для создания контракта на интернет с параметрами.
+   *Все null аргументы заменяются на default значения
+   * @param id - код контракта
+   * @param dateStartOfUse - дата создания контракта
+   * @param dateEndOfUse - дата заершения контракта
+   * @param client - клиент
+   * @param tariff - тариф на интернет
+   */
   public InternetContract(
           long id,
           LocalDate dateStartOfUse,
@@ -49,14 +66,26 @@ public class InternetContract extends Contract{
     }
   }
 
+  /**
+   * Функция получения значения поля {@link InternetContract#tariff}
+   * @return возвращает тариф
+   */
   public InternetTariff getTariff() {
     return tariff;
   }
 
+  /**
+   * Функция определения тарифа {@link InternetContract#tariff}
+   * @param tariff - тариф
+   */
   public void setTariff(InternetTariff tariff) {
     this.tariff = tariff;
   }
 
+  /**
+   * Функция сравния объектов на равенство.
+   * @param o - объект с которым происходит сравние.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
@@ -66,11 +95,17 @@ public class InternetContract extends Contract{
     return tariff == that.tariff;
   }
 
+  /**
+   * Функция для расчета хэш-кода
+   */
   @Override
   public int hashCode() {
     return Objects.hash(super.hashCode(), tariff);
   }
 
+  /**
+   * Функция для приведения объекта к строке
+   */
   @Override
   public String toString() {
     return "InternetContract{" +

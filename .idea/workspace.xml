@@ -23,7 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2c6afd2-287c-484e-b64d-036718bbac65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/InternetContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/InternetContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/MobileContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/MobileContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/TvContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nc/mihalsky/entities/contracts/TvContract.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +201,7 @@
       <workItem from="1604037869357" duration="17410000" />
       <workItem from="1604219095349" duration="2331000" />
       <workItem from="1604306546427" duration="14472000" />
-      <workItem from="1604408445937" duration="4832000" />
+      <workItem from="1604408445937" duration="6124000" />
     </task>
     <servers />
   </component>
