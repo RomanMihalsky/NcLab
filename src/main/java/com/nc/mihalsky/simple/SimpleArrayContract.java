@@ -58,19 +58,19 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
   /**Функция удаляет элемент из списка {@link SimpleArrayContract#values}
    * по id элемента
    * @param id - id элемента
-   * @return Optional true если удаление прошло успешно
-   * @return Optional.empty если удаление прошло неуспешно
+   * @return true если удаление прошло успешно
+   * @return false если удаление прошло неуспешно
    */
   @Override
-  public Optional<Boolean> delete(long id) {
+  public boolean delete(long id) {
     for (int i = 0;i < values.length;i ++) {
       if (((E)values[i]).getId() == id) {
         values[i] = null;
         values = Arrays.stream(values).filter(a -> a!=null).toArray();
-        return Optional.of(true);
+        return true;
       }
     }
-    return Optional.empty();
+    return false;
   }
 
   /**Функция для получения элемента по id из писка {@link SimpleArrayContract#values}
@@ -92,18 +92,18 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
    * на элемент @param e
    * @param e - элемент
    * @param id - id элемента
-   * @return Optional true если замена прошла успешно
-   * @return Optional.empty Optional true если удаление прошло неуспешно
+   * @return true если замена прошла успешно
+   * @return true если замена прошла неуспешно
    */
   @Override
-  public Optional<Boolean> set(long id, E e) {
+  public boolean set(long id, E e) {
     for (int i = 0;i < values.length;i ++) {
       if (((E)values[i]).getId() == id) {
         values[i] = e;
-        return Optional.of(true);
+        return true;
       }
     }
-    return Optional.empty();
+    return false;
   }
 
   /**Функция размер списка {@link SimpleArrayContract#values}

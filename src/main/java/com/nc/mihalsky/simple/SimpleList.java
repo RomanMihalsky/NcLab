@@ -13,10 +13,10 @@ public interface SimpleList<E> extends Iterable<E>{
 
   /**Функция для удаления элемента по индексу
    * @param index - индекс элемента
-   * @return Optional true если удаление прошло успешно
-   * @return Optional.empty если удаление прошло неуспешно
+   * @return true если удаление прошло успешно
+   * @return false если удаление прошло неуспешно
    */
-  Optional<Boolean> delete(int index);
+  boolean delete(int index);
 
   /**Функция для получения элемента по индексу
    * @param index - индекс элемента
@@ -28,10 +28,10 @@ public interface SimpleList<E> extends Iterable<E>{
   /**Функция для замены элемента по индексу
    * @param e - элемент
    * @param index - индекс элемента
-   * @return Optional true если замена прошла успешно
-   * @return Optional.empty Optional true если удаление прошло неуспешно
+   * @return true если замена прошла успешно
+   * @return false если замена прошла неуспешно
    */
-  Optional<Boolean> set(int index,E e);
+  boolean set(int index,E e);
 
   /**Функция для получения размера списка
    * @return int

@@ -55,18 +55,18 @@ public class SimpleArray<E> implements SimpleList<E> {
   /**Функция удаляет элемент из списка {@link SimpleArray#values}
    * по индексу
    * @param index - индекс элемента
-   * @return Optional true если удаление прошло успешно
-   * @return Optional.empty если удаление прошло неуспешно
+   * @return true если удаление прошло успешно
+   * @return false если удаление прошло неуспешно
    */
   @Override
-  public Optional<Boolean> delete(int index) {
+  public boolean delete(int index) {
     if((index<0) || (index>size)){
-      return Optional.empty();
+      return false;
     }
 
     values[index] = null;
     values = Arrays.stream(values).filter(a -> a!=null).toArray();
-    return Optional.of(true);
+    return true;
   }
 
   /**Функция для получения элемента по индексу из писка {@link SimpleArray#values}
@@ -86,16 +86,16 @@ public class SimpleArray<E> implements SimpleList<E> {
    * на элемент @param e
    * @param e - элемент
    * @param index - индекс элемента
-   * @return Optional true если замена прошла успешно
-   * @return Optional.empty Optional true если удаление прошло неуспешно
+   * @return true если замена прошла успешно
+   * @return false если замена прошла неуспешно
    */
   @Override
-  public Optional<Boolean> set(int index, E e) {
+  public boolean set(int index, E e) {
     if((index<0) || (index>size)){
-      return Optional.empty();
+      return false;
     }
     values[index] = e;
-    return Optional.of(true);
+    return true;
   }
 
   /**Функция размер списка {@link SimpleArray#values}
