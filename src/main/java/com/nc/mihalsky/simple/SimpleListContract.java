@@ -1,5 +1,6 @@
 package com.nc.mihalsky.simple;
 
+import java.util.Comparator;
 import java.util.Optional;
 
 /**
@@ -34,6 +35,8 @@ public interface SimpleListContract<E> extends Iterable<E> {
    * @return false если замена прошла неуспешно
    */
    boolean set(long index,E e);
+
+   public void sortBy(Comparator<E> comparator);
 
   /**Функция для получения размера списка
    * @return int

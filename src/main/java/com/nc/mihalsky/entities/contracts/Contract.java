@@ -13,7 +13,7 @@ import java.util.Objects;
  * Классы наследуемые от Contact должны реализововать метод {@link Contract#toString()}
  * @author Roman Mihalsky
  */
-public abstract class Contract {
+public abstract class Contract implements Comparable<Contract>{
     /**Поле код контракта*/
     protected long id;
     /**Поле дата создания контракта*/

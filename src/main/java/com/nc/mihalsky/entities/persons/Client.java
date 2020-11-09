@@ -11,7 +11,7 @@ import java.util.Objects;
  * @author Roman Mihalsky
  */
 
-public class Client implements Person {
+public class Client implements Person,Comparable<Client> {
     /**Поле id*/
     private  long id;
     /**Поле имя*/
@@ -283,6 +283,17 @@ public class Client implements Person {
                 passportSeries,
                 passportNumber,
                 dateOfBirthDay);
+    }
+
+    @Override
+    public int compareTo(Client o) {
+        if(this.getId() > o.getId()){
+            return 1;
+        }else if(this.getId() < o.getId()){
+            return -1;
+        }else {
+            return 0;
+        }
     }
 
     /**

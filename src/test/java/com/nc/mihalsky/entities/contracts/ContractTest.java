@@ -14,6 +14,17 @@ class ContractTest {
     void init () {
         contract = new Contract() {
             @Override
+            public int compareTo(Contract o) {
+                if(this.getId() > o.getId()){
+                    return 1;
+                }else if(this.getId() < o.getId()){
+                    return -1;
+                }else {
+                    return 0;
+                }
+            }
+
+            @Override
             public String toString() {
                 Client client = new Client();
 

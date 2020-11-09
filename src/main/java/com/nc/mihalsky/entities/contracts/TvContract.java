@@ -103,6 +103,17 @@ public class TvContract extends Contract{
     return Objects.hash(super.hashCode(), tariff);
   }
 
+  @Override
+  public int compareTo(Contract o) {
+    if(this.getId() > o.getId()){
+      return 1;
+    }else if(this.getId() < o.getId()){
+      return -1;
+    }else {
+      return 0;
+    }
+  }
+
   /**
    * Функция для приведения объекта к строке
    */

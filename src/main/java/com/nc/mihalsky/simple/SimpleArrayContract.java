@@ -2,9 +2,7 @@ package com.nc.mihalsky.simple;
 
 import com.nc.mihalsky.entities.contracts.Contract;
 
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Optional;
+import java.util.*;
 
 /**
  *Класс SimpleArrayContract позволяет хранить в себе
@@ -104,6 +102,11 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
       }
     }
     return false;
+  }
+
+  @Override
+  public void sortBy(Comparator<E> comparator) {
+
   }
 
   /**Функция размер списка {@link SimpleArrayContract#values}
