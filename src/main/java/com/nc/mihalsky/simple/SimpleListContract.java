@@ -36,7 +36,7 @@ public interface SimpleListContract<E> extends Iterable<E> {
    */
    boolean set(long index,E e);
 
-   public void sortBy(Comparator<E> comparator);
+   public void bubbleSortBy(Comparator<E> comparator);
 
   /**Функция для получения размера списка
    * @return int

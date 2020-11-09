@@ -1,6 +1,8 @@
 package com.nc.mihalsky.simple;
 
+import com.nc.mihalsky.comparators.ByIdContractComparator;
 import com.nc.mihalsky.entities.contracts.Contract;
+import com.nc.mihalsky.sorters.BubbleSortContract;
 
 import java.util.*;
 
@@ -105,8 +107,10 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
   }
 
   @Override
-  public void sortBy(Comparator<E> comparator) {
+  public void bubbleSortBy(Comparator comparator) {
+    BubbleSortContract<Contract> bubbleSortContract = new BubbleSortContract<>();
 
+    bubbleSortContract.sort(values, comparator);
   }
 
   /**Функция размер списка {@link SimpleArrayContract#values}
