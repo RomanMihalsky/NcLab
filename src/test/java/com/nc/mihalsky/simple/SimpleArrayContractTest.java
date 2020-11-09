@@ -1,5 +1,6 @@
 package com.nc.mihalsky.simple;
 
+import com.nc.mihalsky.comparators.ByDateStartOfUseContract;
 import com.nc.mihalsky.entities.contracts.Contract;
 import com.nc.mihalsky.entities.contracts.InternetContract;
 import com.nc.mihalsky.entities.contracts.MobileContract;
@@ -12,6 +13,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Iterator;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -137,6 +139,11 @@ class SimpleArrayContractTest {
     contracts = (Object[]) field.get(simpleArrayContract);
 
     assertEquals(simpleArrayContract.toString(), Arrays.toString(contracts),"Fields didn't match");
+  }
+
+  @Test
+  void bubbleSortBy(){
+    simpleArrayContract.bubbleSortBy(new ByDateStartOfUseContract());
   }
 
   @Test

@@ -4,7 +4,7 @@ import com.nc.mihalsky.entities.contracts.Contract;
 
 import java.util.Comparator;
 
-public class BubbleSortContract<E extends Contract> {
+public class BubbleSortContract<E extends Contract> implements Sorter<E>{
   public void sort(Object[] values, Comparator<E> c){
     boolean sorted = false;
     E temp;
