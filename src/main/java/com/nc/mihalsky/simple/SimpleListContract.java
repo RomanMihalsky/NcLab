@@ -38,6 +38,8 @@ public interface SimpleListContract<E> extends Iterable<E> {
 
    public void bubbleSortBy(Comparator<E> comparator);
 
+  public void insertionSortBy(Comparator<E> comparator);
+
   /**Функция для получения размера списка
    * @return int
    */

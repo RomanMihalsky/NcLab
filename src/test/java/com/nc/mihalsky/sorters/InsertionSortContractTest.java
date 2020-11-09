@@ -8,11 +8,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
-import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BubbleSortContractTest {
+class InsertionSortContractTest {
+  InsertionSortContract<Contract> insertionSortContract;
+  @BeforeEach
+  void init(){
+    insertionSortContract = new InsertionSortContract<>();
+  }
+
   @Test
   void sort() throws NoSuchFieldException, IllegalAccessException {
     SimpleArrayContract<Contract> simpleArrayContract = new SimpleArrayContract<>();
@@ -26,7 +31,7 @@ class BubbleSortContractTest {
     Field field = simpleArrayContract.getClass().getDeclaredField("values");
     field.setAccessible(true);
     field.set(simpleArrayContract,contracts);
-    simpleArrayContract.bubbleSortBy(new ByIdContractComparator());
+    simpleArrayContract.insertionSortBy(new ByIdContractComparator());
 
     Contract [] contractsExpected = {contract1,contract2,contract3};
 

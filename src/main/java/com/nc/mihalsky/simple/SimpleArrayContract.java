@@ -3,6 +3,7 @@ package com.nc.mihalsky.simple;
 import com.nc.mihalsky.comparators.ByIdContractComparator;
 import com.nc.mihalsky.entities.contracts.Contract;
 import com.nc.mihalsky.sorters.BubbleSortContract;
+import com.nc.mihalsky.sorters.InsertionSortContract;
 
 import java.util.*;
 
@@ -111,6 +112,13 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
     BubbleSortContract<Contract> bubbleSortContract = new BubbleSortContract<>();
 
     bubbleSortContract.sort(values, comparator);
+  }
+
+  @Override
+  public void insertionSortBy(Comparator comparator) {
+    InsertionSortContract<Contract> insertionSortContract = new InsertionSortContract<>();
+
+    insertionSortContract.sort(values,comparator);
   }
 
   /**Функция размер списка {@link SimpleArrayContract#values}
