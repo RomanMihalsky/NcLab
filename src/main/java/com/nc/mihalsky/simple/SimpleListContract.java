@@ -1,7 +1,10 @@
 package com.nc.mihalsky.simple;
 
+import com.nc.mihalsky.entities.contracts.Contract;
+
 import java.util.Comparator;
 import java.util.Optional;
+import java.util.function.Predicate;
 
 /**
  *interface SimpleListContract для реализации списков
@@ -36,12 +39,14 @@ public interface SimpleListContract<E> extends Iterable<E> {
    */
    boolean set(long index,E e);
 
-   public void bubbleSortBy(Comparator<E> comparator);
+   void bubbleSortBy(Comparator<E> comparator);
 
-  public void insertionSortBy(Comparator<E> comparator);
+   void insertionSortBy(Comparator<E> comparator);
 
-  /**Функция для получения размера списка
+   SimpleArrayContract<Contract> searchBy(Predicate<E> condition);
+
+   /**Функция для получения размера списка
    * @return int
    */
-  int size();
+   int size();
 }

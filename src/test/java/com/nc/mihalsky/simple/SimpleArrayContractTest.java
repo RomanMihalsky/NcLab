@@ -6,6 +6,7 @@ import com.nc.mihalsky.entities.contracts.InternetContract;
 import com.nc.mihalsky.entities.contracts.MobileContract;
 import com.nc.mihalsky.entities.contracts.TvContract;
 import com.nc.mihalsky.factories.FactoryContract;
+import com.nc.mihalsky.predicates.PredicateConditionId;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -144,6 +145,38 @@ class SimpleArrayContractTest {
   @Test
   void bubbleSortBy(){
     simpleArrayContract.bubbleSortBy(new ByDateStartOfUseContract());
+  }
+
+  @Test
+  void insertionSortBy(){
+    simpleArrayContract.insertionSortBy(new ByDateStartOfUseContract());
+  }
+
+  @Test
+  void searchBy() throws NoSuchFieldException, IllegalAccessException {
+    FactoryContract factoryContract = new FactoryContract();
+
+    Contract contract1 = factoryContract.createInternetContract();
+    Contract contract2 = factoryContract.createMobileContract();
+    Contract contract3 = factoryContract.createTvContract();
+    Contract [] contracts = {contract2,contract1,contract3};
+
+    Field fieldValues = simpleArrayContract.getClass().getDeclaredField("values");
+    fieldValues.setAccessible(true);
+    fieldValues.set(simpleArrayContract,contracts);
+
+    Field fieldContractId = Contract.class.getDeclaredField("id");
+    fieldContractId.setAccessible(true);
+    long id = (long)fieldContractId.get(contract1);
+
+    PredicateConditionId predicateConditionId = new PredicateConditionId(id);
+
+    SimpleArrayContract<Contract> actualSimpleArrayContract = simpleArrayContract.searchBy(predicateConditionId.idPredicate);
+    Field fieldValuesActual = simpleArrayContract.getClass().getDeclaredField("values");
+    fieldValuesActual.setAccessible(true);
+    Object[] objects = (Object[]) fieldValuesActual.get(actualSimpleArrayContract);
+
+    assertEquals(contract1,objects[0],"Field's didn't match");
   }
 
   @Test

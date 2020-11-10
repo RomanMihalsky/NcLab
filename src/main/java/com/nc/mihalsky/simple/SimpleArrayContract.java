@@ -6,6 +6,7 @@ import com.nc.mihalsky.sorters.BubbleSortContract;
 import com.nc.mihalsky.sorters.InsertionSortContract;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 /**
  *Класс SimpleArrayContract позволяет хранить в себе
@@ -119,6 +120,17 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
     InsertionSortContract<Contract> insertionSortContract = new InsertionSortContract<>();
 
     insertionSortContract.sort(values,comparator);
+  }
+
+  @Override
+  public SimpleArrayContract<Contract> searchBy(Predicate<E> condition) {
+    SimpleArrayContract<Contract> simpleArrayContract = new SimpleArrayContract<>();
+    for(Object value : values){
+      if(condition.test((E)value)){
+        simpleArrayContract.add((E)value);
+      }
+    }
+    return simpleArrayContract;
   }
 
   /**Функция размер списка {@link SimpleArrayContract#values}
