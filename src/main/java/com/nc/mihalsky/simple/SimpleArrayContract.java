@@ -108,6 +108,7 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
     return false;
   }
 
+  /**Функция вызывает метод сортировки пузырьком у класса {@link BubbleSortContract}*/
   @Override
   public void bubbleSortBy(Comparator comparator) {
     BubbleSortContract<Contract> bubbleSortContract = new BubbleSortContract<>();
@@ -115,6 +116,7 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
     bubbleSortContract.sort(values, comparator);
   }
 
+  /**Функция вызывает метод сортировки вставками у класса {@link InsertionSortContract}*/
   @Override
   public void insertionSortBy(Comparator comparator) {
     InsertionSortContract<Contract> insertionSortContract = new InsertionSortContract<>();
@@ -122,6 +124,10 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
     insertionSortContract.sort(values,comparator);
   }
 
+  /**Функция поиск по критерию condition
+   * @param - condition
+   * @return SimpleArrayContract<Contract>
+   */
   @Override
   public SimpleArrayContract<Contract> searchBy(Predicate<E> condition) {
     SimpleArrayContract<Contract> simpleArrayContract = new SimpleArrayContract<>();

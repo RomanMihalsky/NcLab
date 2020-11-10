@@ -5,6 +5,7 @@ import com.nc.mihalsky.entities.contracts.Contract;
 import java.util.Comparator;
 
 public class InsertionSortContract <E extends Contract> implements Sorter<E>{
+  /**Сортирует массив values методом вставок*/
   @Override
   public void sort(Object[] values, Comparator<E> c) {
     for (int i = 1; i < values.length; i++) {

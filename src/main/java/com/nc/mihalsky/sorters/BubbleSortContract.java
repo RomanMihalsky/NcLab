@@ -5,6 +5,7 @@ import com.nc.mihalsky.entities.contracts.Contract;
 import java.util.Comparator;
 
 public class BubbleSortContract<E extends Contract> implements Sorter<E>{
+  /**Сортирует массив values методом пузырка*/
   public void sort(Object[] values, Comparator<E> c){
     boolean sorted = false;
     E temp;
