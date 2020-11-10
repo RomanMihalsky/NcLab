@@ -1,6 +1,5 @@
 package com.nc.mihalsky.predicates;
 
-import com.nc.mihalsky.entities.contracts.enums.MobileTariff;
 import com.nc.mihalsky.entities.contracts.enums.TvTariff;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
