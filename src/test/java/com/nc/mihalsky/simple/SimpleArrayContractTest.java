@@ -143,13 +143,8 @@ class SimpleArrayContractTest {
   }
 
   @Test
-  void bubbleSortBy(){
-    simpleArrayContract.bubbleSortBy(new ByDateStartOfUseContract());
-  }
-
-  @Test
-  void insertionSortBy(){
-    simpleArrayContract.insertionSortBy(new ByDateStartOfUseContract());
+  void sortBy(){
+    simpleArrayContract.sortBy(new ByDateStartOfUseContract());
   }
 
   @Test

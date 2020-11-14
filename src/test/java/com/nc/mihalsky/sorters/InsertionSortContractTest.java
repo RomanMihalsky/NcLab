@@ -22,6 +22,7 @@ class InsertionSortContractTest {
   void sort() throws NoSuchFieldException, IllegalAccessException {
     SimpleArrayContract<Contract> simpleArrayContract = new SimpleArrayContract<>();
     FactoryContract factoryContract = new FactoryContract();
+    simpleArrayContract.setSorter(new InsertionSortContract<>());
 
     Contract contract1 = factoryContract.createInternetContract();
     Contract contract2 = factoryContract.createMobileContract();
@@ -31,7 +32,7 @@ class InsertionSortContractTest {
     Field field = simpleArrayContract.getClass().getDeclaredField("values");
     field.setAccessible(true);
     field.set(simpleArrayContract,contracts);
-    simpleArrayContract.insertionSortBy(new ByIdContractComparator());
+    simpleArrayContract.sortBy(new ByIdContractComparator());
 
     Contract [] contractsExpected = {contract1,contract2,contract3};
 

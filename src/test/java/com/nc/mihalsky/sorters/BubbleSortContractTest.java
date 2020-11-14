@@ -26,7 +26,7 @@ class BubbleSortContractTest {
     Field field = simpleArrayContract.getClass().getDeclaredField("values");
     field.setAccessible(true);
     field.set(simpleArrayContract,contracts);
-    simpleArrayContract.bubbleSortBy(new ByIdContractComparator());
+    simpleArrayContract.sortBy(new ByIdContractComparator());
 
     Contract [] contractsExpected = {contract1,contract2,contract3};
 

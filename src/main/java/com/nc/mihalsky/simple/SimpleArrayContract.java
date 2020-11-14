@@ -4,6 +4,7 @@ import com.nc.mihalsky.comparators.ByIdContractComparator;
 import com.nc.mihalsky.entities.contracts.Contract;
 import com.nc.mihalsky.sorters.BubbleSortContract;
 import com.nc.mihalsky.sorters.InsertionSortContract;
+import com.nc.mihalsky.sorters.Sorter;
 
 import java.util.*;
 import java.util.function.Predicate;
@@ -11,7 +12,7 @@ import java.util.function.Predicate;
 /**
  *Класс SimpleArrayContract позволяет хранить в себе
  *различные объекты, наследуемые от <tt>Contract</tt>.
- *Имеет параметры: <b>values</b>,<b>size</b>
+ *Имеет параметры: <b>values</b>,<b>size</b>,<b>sorter</b>
  *@author Roman Mihalsky
  */
 public class SimpleArrayContract<E extends Contract> implements SimpleListContract<E>{
@@ -19,6 +20,8 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
   private Object[] values;
   /**Поле размер списка {@link SimpleArrayContract#values}*/
   private int size;
+  /**Поле сортировщик*/
+  private Sorter<E> sorter;
 
   /**Конструктор для создания нового объекта SimpleArrayContract
    *Полю {@link SimpleArrayContract#values} присваивает новый массив
@@ -26,6 +29,17 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
    */
   public SimpleArrayContract(){
     this.values = new Object [1];
+    sorter = new BubbleSortContract<>();
+  }
+
+  /**
+   * Функция определения сортировщика{@link SimpleArrayContract#sorter}
+   * @param sorter - сортировщик
+   */
+  public void setSorter(Sorter<E> sorter) {
+    if(sorter != null) {
+      this.sorter = sorter;
+    }
   }
 
   /**Функция для добавления элемента
@@ -108,20 +122,10 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
     return false;
   }
 
-  /**Функция вызывает метод сортировки пузырьком у класса {@link BubbleSortContract}*/
+  /**Функция вызывает метод сортировки у переменной {@link SimpleArrayContract#sorter}*/
   @Override
-  public void bubbleSortBy(Comparator comparator) {
-    BubbleSortContract<Contract> bubbleSortContract = new BubbleSortContract<>();
-
-    bubbleSortContract.sort(values, comparator);
-  }
-
-  /**Функция вызывает метод сортировки вставками у класса {@link InsertionSortContract}*/
-  @Override
-  public void insertionSortBy(Comparator comparator) {
-    InsertionSortContract<Contract> insertionSortContract = new InsertionSortContract<>();
-
-    insertionSortContract.sort(values,comparator);
+  public void sortBy(Comparator comparator) {
+    sorter.sort(values,comparator);
   }
 
   /**Функция поиск по критерию condition

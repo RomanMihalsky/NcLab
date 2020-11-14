@@ -39,9 +39,7 @@ public interface SimpleListContract<E> extends Iterable<E> {
    */
    boolean set(long index,E e);
 
-   void bubbleSortBy(Comparator<E> comparator);
-
-   void insertionSortBy(Comparator<E> comparator);
+   void sortBy(Comparator<E> comparator);
 
    SimpleArrayContract<Contract> searchBy(Predicate<E> condition);
 
