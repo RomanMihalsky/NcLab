@@ -28,11 +28,17 @@ public class CsvOpener implements Opener{
       CSVParser csvParser = new CSVParserBuilder().withSeparator(';').build();
 
       CSVReader csvReader = new CSVReaderBuilder(fileReader).withCSVParser(csvParser).build();
-      
+
       allData = csvReader.readAll();
 
     }catch (Exception e){
       e.printStackTrace();
     }
+  }
+
+  private static String[][] getArrayOfValues(){
+    String [][] csvValues = new String[allData.size()][];
+    allData.toArray(csvValues);
+    return csvValues;
   }
 }
