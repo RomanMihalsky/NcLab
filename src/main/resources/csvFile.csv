@@ -1,2 +1,2 @@
-dateStartOfUse;dateEndOfUse;tariff;condition;name;surname;patronymic;gender;phoneNumber;passportSeries;passportNumber;dateOfBirthDay
+dateStartOfUse;dateEndOfUse;tariff;condition1;condition2;name;surname;patronymic;gender;phoneNumber;passportSeries;passportNumber;dateOfBirthDay
 10.05.2000;12.07.2007;internet;5;Roman;Mihalsky;Alex;;12312312312;123123213;1,23E+11;12.10.1999;
