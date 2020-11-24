@@ -17,8 +17,14 @@ public class CsvOpener implements Opener{
   @Override
   public SimpleListContract<Contract> readFileToSimpleList(String fileName) {
     readData(fileName);
+    parseData();
 
     return null;
+  }
+
+  private void parseData() {
+    String [][] csvValues = getArrayOfValues();
+    String [] titles = csvValues[0];
   }
 
   private void readData(String fileName) {
