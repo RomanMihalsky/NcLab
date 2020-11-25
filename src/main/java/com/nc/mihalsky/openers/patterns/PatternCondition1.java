@@ -3,7 +3,7 @@ package com.nc.mihalsky.openers.patterns;
 public class PatternCondition1 implements TitlePattern{
   private int indexCondition1;
   public static final String conditionPattern = "^\\d+$";
-  private static final String condition1Title = "condition1";
+  public static final String condition1Title = "condition1";
 
   @Override
   public String getTitle() {
