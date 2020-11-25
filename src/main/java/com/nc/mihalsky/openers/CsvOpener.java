@@ -4,6 +4,8 @@ import com.nc.mihalsky.entities.contracts.Contract;
 import com.nc.mihalsky.entities.persons.Client;
 import com.nc.mihalsky.openers.creators.CreatorClientFromCsv;
 import com.nc.mihalsky.openers.patterns.*;
+import com.nc.mihalsky.simple.SimpleArray;
+import com.nc.mihalsky.simple.SimpleList;
 import com.nc.mihalsky.simple.SimpleListContract;
 import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;
@@ -50,10 +52,9 @@ public class CsvOpener implements Opener{
 
   private SimpleListContract<Contract> fillUp() {
     String [][] csvValues = getArrayOfValues();
+    CreatorClientFromCsv creator = new CreatorClientFromCsv(mapPatterns);
     for(int i = 1;i < csvValues.length;i++){
-      CreatorClientFromCsv creator = new CreatorClientFromCsv(mapPatterns);
       Client client = creator.create(csvValues[i]);
-      System.out.println(client);
     }
     return null;
   }

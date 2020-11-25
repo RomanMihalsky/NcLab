@@ -6,6 +6,7 @@ import com.nc.mihalsky.openers.patterns.*;
 import com.nc.mihalsky.simple.SimpleArray;
 import com.nc.mihalsky.simple.SimpleList;
 import org.joda.time.LocalDate;
+import org.joda.time.format.DateTimeFormat;
 
 import java.util.HashMap;
 
@@ -27,23 +28,27 @@ public class CreatorClientFromCsv implements CreatorFromCsv<Client> {
     long phoneNumber = Long.parseLong(values[mapPatterns.get(PatternPhoneNumber.phoneNumberTitle).getIndexOfTitle()]);
     int passportNumber = Integer.parseInt(values[mapPatterns.get(PatternPassportNumber.passportNumberTitle).getIndexOfTitle()]);
     int passportSeries = Integer.parseInt(values[mapPatterns.get(PatternPassportSeries.passportSeriesTitle).getIndexOfTitle()]);
-    LocalDate dateOfBirthDay = LocalDate.parse(values[mapPatterns.get(PatternDateOfBirthDay.dateOfBirthDayTitle).getIndexOfTitle()]);
+    LocalDate dateOfBirthDay = LocalDate.parse(values[mapPatterns.get(PatternDateOfBirthDay.dateOfBirthDayTitle).getIndexOfTitle()],
+            DateTimeFormat.forPattern("MM.dd.yyyy"));
 
-    for (Client c:clients) {
-      if((""+c.getPassportSeries()+c.getPassportNumber()).equals(""+passportSeries+passportNumber))
-      {
-        return c;
+    if(clients.size()!=0) {
+      for (Client c : clients) {
+        if (c.getPassportSeries() + c.getPassportNumber()==passportSeries + passportNumber) {
+          return c;
+        }
       }
     }
 
-    return FactoryClient.createClient(name,
-                                      surname,
-                                      patronymic,
-                                      gender,
-                                      phoneNumber,
-                                      passportSeries,
-                                      passportNumber,
-                                      dateOfBirthDay);
+    Client client = FactoryClient.createClient(name,
+            surname,
+            patronymic,
+            gender,
+            phoneNumber,
+            passportSeries,
+            passportNumber,
+            dateOfBirthDay);
+    clients.add(client);
+    return client;
   }
 
 }

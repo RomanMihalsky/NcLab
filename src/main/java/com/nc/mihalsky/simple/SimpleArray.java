@@ -103,7 +103,7 @@ public class SimpleArray<E> implements SimpleList<E> {
    */
   @Override
   public int size() {
-    return values.length;
+    return size;
   }
 
   /**Функция создает новый ArrayIterator с аргументом {@link SimpleArray#values}*/

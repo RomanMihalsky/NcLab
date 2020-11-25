@@ -148,7 +148,7 @@ public class SimpleArrayContract<E extends Contract> implements SimpleListContra
    */
   @Override
   public int size() {
-    return values.length;
+    return size;
   }
 
   /**Функция создает новый ArrayIterator с аргументом {@link SimpleArrayContract#values}*/

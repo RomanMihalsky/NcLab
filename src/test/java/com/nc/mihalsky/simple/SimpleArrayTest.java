@@ -109,9 +109,10 @@ class SimpleArrayTest {
 
   @Test
   void size() throws NoSuchFieldException, IllegalAccessException {
-    Field field = simpleArray.getClass().getDeclaredField("values");
+    Field field = simpleArray.getClass().getDeclaredField("size");
     field.setAccessible(true);
-    Integer [] result = {1,2,3};
+    field.set(simpleArray,3);
+    Object result = field.get(simpleArray);
     field.set(simpleArray,result);
 
     assertEquals(3,simpleArray.size(),"Fields didn't match");

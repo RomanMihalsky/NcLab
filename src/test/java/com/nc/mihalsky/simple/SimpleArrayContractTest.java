@@ -176,15 +176,11 @@ class SimpleArrayContractTest {
 
   @Test
   void size() throws NoSuchFieldException, IllegalAccessException {
-    InternetContract internetContract = factoryContract.createInternetContract();
-    MobileContract mobileContract = factoryContract.createMobileContract();
-    TvContract tvContract = factoryContract.createTvContract();
-
-    Object [] contracts = {internetContract,mobileContract,tvContract};
-
-    Field fieldContracts = simpleArrayContract.getClass().getDeclaredField("values");
-    fieldContracts.setAccessible(true);
-    fieldContracts.set(simpleArrayContract,contracts);
+    Field field = simpleArrayContract.getClass().getDeclaredField("size");
+    field.setAccessible(true);
+    field.set(simpleArrayContract,3);
+    Object result = field.get(simpleArrayContract);
+    field.set(simpleArrayContract,result);
 
     assertEquals(3,simpleArrayContract.size(),"Fields didn't match");
   }
