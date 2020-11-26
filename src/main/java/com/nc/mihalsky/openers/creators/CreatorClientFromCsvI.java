@@ -1,5 +1,5 @@
 package com.nc.mihalsky.openers.creators;
 
-public interface CreatorFromCsv<T> {
+public interface CreatorClientFromCsvI<T> {
   T create(String[] values);
 }

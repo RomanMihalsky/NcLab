@@ -10,7 +10,7 @@ import org.joda.time.format.DateTimeFormat;
 
 import java.util.HashMap;
 
-public class CreatorClientFromCsv implements CreatorFromCsv<Client> {
+public class CreatorClientFromCsv implements CreatorClientFromCsvI<Client> {
   private HashMap<String,TitlePattern> mapPatterns;
   private SimpleList<Client> clients;
 
@@ -29,7 +29,7 @@ public class CreatorClientFromCsv implements CreatorFromCsv<Client> {
     int passportNumber = Integer.parseInt(values[mapPatterns.get(PatternPassportNumber.passportNumberTitle).getIndexOfTitle()]);
     int passportSeries = Integer.parseInt(values[mapPatterns.get(PatternPassportSeries.passportSeriesTitle).getIndexOfTitle()]);
     LocalDate dateOfBirthDay = LocalDate.parse(values[mapPatterns.get(PatternDateOfBirthDay.dateOfBirthDayTitle).getIndexOfTitle()],
-            DateTimeFormat.forPattern("MM.dd.yyyy"));
+            DateTimeFormat.forPattern("dd.MM.yyyy"));
 
     if(clients.size()!=0) {
       for (Client c : clients) {

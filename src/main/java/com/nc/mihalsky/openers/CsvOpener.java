@@ -3,8 +3,10 @@ package com.nc.mihalsky.openers;
 import com.nc.mihalsky.entities.contracts.Contract;
 import com.nc.mihalsky.entities.persons.Client;
 import com.nc.mihalsky.openers.creators.CreatorClientFromCsv;
+import com.nc.mihalsky.openers.creators.CreatorContractFromCsv;
 import com.nc.mihalsky.openers.patterns.*;
 import com.nc.mihalsky.simple.SimpleArray;
+import com.nc.mihalsky.simple.SimpleArrayContract;
 import com.nc.mihalsky.simple.SimpleList;
 import com.nc.mihalsky.simple.SimpleListContract;
 import com.opencsv.CSVParser;
@@ -13,6 +15,7 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 
 import java.io.FileReader;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -42,21 +45,25 @@ public class CsvOpener implements Opener{
   }
 
   @Override
-  public SimpleListContract<Contract> readFileToSimpleList(String fileName) {
+  public SimpleArrayContract<Contract> readFileToSimpleList(String fileName) {
     readData(fileName);
     findPositions();
-    SimpleListContract<Contract> contracts = fillUp();
+    SimpleArrayContract<Contract> contracts = fillUp();
 
     return contracts;
   }
 
-  private SimpleListContract<Contract> fillUp() {
+  private SimpleArrayContract<Contract> fillUp() {
     String [][] csvValues = getArrayOfValues();
     CreatorClientFromCsv creator = new CreatorClientFromCsv(mapPatterns);
+    CreatorContractFromCsv creatorContract = new CreatorContractFromCsv(mapPatterns);
+    SimpleArrayContract<Contract> list = new SimpleArrayContract<>();
     for(int i = 1;i < csvValues.length;i++){
       Client client = creator.create(csvValues[i]);
+      Contract contract = creatorContract.create(csvValues[i],client);
+      list.add(contract);
     }
-    return null;
+    return list;
   }
 
   private void findPositions() {
