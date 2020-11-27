@@ -55,8 +55,9 @@ class CsvOpenerTest {
     Method methodFillUp = csvOpener.getClass().getDeclaredMethod("fillUp");
     methodFillUp.setAccessible(true);
     SimpleArrayContract<Contract> contractsResult = (SimpleArrayContract<Contract>) methodFillUp.invoke(csvOpener);
+    Contract contract = contractsResult.get(1).get();
     assertEquals("[InternetContract{tariff=InternetTariff{internetSpeed=100}," +
-            " id=1, dateStartOfUse=2000-05-10, dateEndOfUse=2007-07-12, client=1}]",contractsResult.toString(),"Field's didn't match");
+            " id=1, dateStartOfUse=2000-05-10, dateEndOfUse=2007-07-12, client="+contract.getClient().getId()+"}]",contractsResult.toString(),"Field's didn't match");
   }
 
   @Test
