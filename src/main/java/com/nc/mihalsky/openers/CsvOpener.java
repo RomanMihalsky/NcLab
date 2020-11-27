@@ -5,17 +5,13 @@ import com.nc.mihalsky.entities.persons.Client;
 import com.nc.mihalsky.openers.creators.CreatorClientFromCsv;
 import com.nc.mihalsky.openers.creators.CreatorContractFromCsv;
 import com.nc.mihalsky.openers.patterns.*;
-import com.nc.mihalsky.simple.SimpleArray;
 import com.nc.mihalsky.simple.SimpleArrayContract;
-import com.nc.mihalsky.simple.SimpleList;
-import com.nc.mihalsky.simple.SimpleListContract;
 import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 
 import java.io.FileReader;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -78,10 +74,6 @@ public class CsvOpener implements Opener{
         }
       }
     }
-  }
-
-  private void parseData() {
-
   }
 
   private void readData(String fileName) {
