@@ -19,17 +19,32 @@ import org.joda.time.format.DateTimeFormat;
 
 import java.util.HashMap;
 
+/**
+ *Класс CreatorContractFromCsv для создания контракта из csv данных
+ * @author Roman Mihalsky
+ */
 public class CreatorContractFromCsv implements CreatorContractFromCsvI<Contract>{
+  /**Поле Map, где ключ(название поля в csv) и значение(соответствующий pattern)*/
   private HashMap<String, TitlePattern> mapPatterns;
+  /**Список контрактов*/
   private SimpleArrayContract<Contract> contracts;
+  /**Фабрика контрактов*/
   FactoryContract factoryContract;
 
+  /**Constructor заполняет  mapPatterns
+   * и создает новый список контрактов с фабрикой
+   */
   public CreatorContractFromCsv(HashMap<String,TitlePattern> mapPatterns){
     this.mapPatterns = mapPatterns;
     this.contracts = new SimpleArrayContract<>();
     this.factoryContract = new FactoryContract();
   }
 
+  /**Функция возвращает контракт, созданный из csv
+   * @param  values - данные из csv
+   * @param client - клиент
+   * @return Contract - контракт
+   */
   @Override
   public Contract create(String[] values, Client client) {
     LocalDate dateStartOfUse = LocalDate.parse(values[mapPatterns.get(PatternDateStartOfUse.dateStartOfUseTitle).getIndexOfTitle()],
@@ -40,6 +55,13 @@ public class CreatorContractFromCsv implements CreatorContractFromCsvI<Contract>
     return contract;
   }
 
+  /**Функция создает новый контракт и возвращает его
+   * @param  values - данные из csv
+   * @param dateEndOfUse - дата заершения контракта
+   * @param dateStartOfUse - дата создания контракта
+   * @param client - клиент
+   * @return Contract - контракт
+   */
   private Contract createFull(String[] values,LocalDate dateStartOfUse,LocalDate dateEndOfUse,Client client){
     switch (values[mapPatterns.get("tariff").getIndexOfTitle()]){
 

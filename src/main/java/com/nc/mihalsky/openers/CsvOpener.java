@@ -15,12 +15,23 @@ import java.io.FileReader;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ *Класс CsvOpener для преобразования данных из CSV в Contracts
+ * @author Roman Mihalsky
+ */
 public class CsvOpener implements Opener{
+  /**Поле позиция поля имя в csv*/
   public static final String CSV_FILE_PATH = "src\\main\\resources\\csvFile.csv";
+  /**Поле список данных из csv файла*/
   private static List<String[]> allData;
+  /**Поле массив patterns*/
   private final TitlePattern[] patterns;
+  /**Поле Map, где ключ(название поля в csv) и значение(соответствующий pattern)*/
   private HashMap<String,TitlePattern> mapPatterns;
 
+  /**Default constructor заполняет массив patterns новыми значениемя
+   * и создает новую Map
+   */
   public CsvOpener(){
     patterns = new TitlePattern[]{
             new PatternCondition1(),
@@ -40,6 +51,10 @@ public class CsvOpener implements Opener{
     this.mapPatterns = new HashMap<>();
   }
 
+  /**Функция возвращает заполненный SimpleArrayContract<Contract> контрактами из csv файла
+   * @param fileName - путь к csv файлу
+   * @return SimpleArrayContract<Contract> - список контрактов
+   */
   @Override
   public SimpleArrayContract<Contract> readFileToSimpleList(String fileName) {
     readData(fileName);
@@ -49,6 +64,10 @@ public class CsvOpener implements Opener{
     return contracts;
   }
 
+  /**Функция заполняет новый SimpleArrayContract<Contract> контрактами из csv файла и
+   * передает в {@link CsvOpener#readFileToSimpleList(String)}
+   * @return SimpleArrayContract<Contract> - список контрактов
+   */
   private SimpleArrayContract<Contract> fillUp() {
     String [][] csvValues = getArrayOfValues();
     CreatorClientFromCsv creator = new CreatorClientFromCsv(mapPatterns);
@@ -62,6 +81,7 @@ public class CsvOpener implements Opener{
     return list;
   }
 
+  /**Функция поиска позиций заголовков*/
   private void findPositions() {
     String [][] csvValues = getArrayOfValues();
     String [] titles = csvValues[0];
@@ -76,6 +96,9 @@ public class CsvOpener implements Opener{
     }
   }
 
+  /**Функция считывает данные csv файла в список {@link CsvOpener#allData}
+   * @param fileName - путь к csv файлу
+   */
   private void readData(String fileName) {
     try {
       FileReader fileReader = new FileReader(fileName);
@@ -91,6 +114,9 @@ public class CsvOpener implements Opener{
     }
   }
 
+/**Функция преобразует список {@link CsvOpener#allData} к массиву
+ * @return String[][] - иассив данных из csv файла
+ */
   private static String[][] getArrayOfValues(){
     String [][] csvValues = new String[allData.size()][];
     allData.toArray(csvValues);

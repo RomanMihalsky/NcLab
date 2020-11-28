@@ -10,8 +10,17 @@ import org.apache.commons.lang3.EnumUtils;
 
 import java.util.HashMap;
 import java.util.List;
-
+/**
+ *Класс ChooserTariff для выбора тарифа
+ * @author Roman Mihalsky
+ */
 public class ChooserTariff {
+
+  /**Функция возвращает интернет тариф
+   * @param  values - данные из csv
+   * @param  mapPatterns - Поле Map, где ключ(название поля в csv) и значение(соответствующий pattern)
+   * @return InternetTariff - интернет тариф
+   */
   public static InternetTariff chooseInternetTariff(String[] values, HashMap<String, TitlePattern> mapPatterns) {
    List<InternetTariff> tariffsList = EnumUtils.getEnumList(InternetTariff.class);
    InternetTariff[] tariffs = new InternetTariff[tariffsList.size()];
@@ -26,6 +35,11 @@ public class ChooserTariff {
    return InternetTariff.MEGAS;
   }
 
+  /**Функция возвращает тариф на мобильную связь
+   * @param  values - данные из csv
+   * @param  mapPatterns - Поле Map, где ключ(название поля в csv) и значение(соответствующий pattern)
+   * @return MobileTariff - тариф на мобильную связь
+   */
   public static MobileTariff chooseMobileTariff(String[] values, HashMap<String, TitlePattern> mapPatterns) {
     List<MobileTariff> tariffsList = EnumUtils.getEnumList(MobileTariff.class);
     MobileTariff[] tariffs = new MobileTariff[tariffsList.size()];
@@ -41,6 +55,11 @@ public class ChooserTariff {
    return MobileTariff.CHEAP;
   }
 
+  /**Функция возвращает тариф на телевидение
+   * @param  values - данные из csv
+   * @param  mapPatterns - Поле Map, где ключ(название поля в csv) и значение(соответствующий pattern)
+   * @return TvTariff - тариф на телевидение
+   */
   public static TvTariff chooseTvTariff(String[] values, HashMap<String, TitlePattern> mapPatterns) {
     List<TvTariff> tariffsList = EnumUtils.getEnumList(TvTariff.class);
     TvTariff[] tariffs = new TvTariff[tariffsList.size()];
