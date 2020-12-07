@@ -5,6 +5,7 @@ import com.nc.mihalsky.entities.persons.Client;
 import com.nc.mihalsky.openers.creators.CreatorClientFromCsv;
 import com.nc.mihalsky.openers.creators.CreatorContractFromCsv;
 import com.nc.mihalsky.openers.patterns.*;
+import com.nc.mihalsky.openers.validators.*;
 import com.nc.mihalsky.simple.SimpleArrayContract;
 import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;
@@ -29,26 +30,27 @@ public class CsvOpener implements Opener{
   /**Поле Map, где ключ(название поля в csv) и значение(соответствующий pattern)*/
   private HashMap<String,TitlePattern> mapPatterns;
 
+  private Validator[] validators;
+
   /**Default constructor заполняет массив patterns новыми значениемя
    * и создает новую Map
    */
   public CsvOpener(){
     patterns = new TitlePattern[]{
-            new PatternCondition1(),
-            new PatternCondition2(),
-            new PatternDateStartOfUse(),
-            new PatternDateEndOfUse(),
-            new PatternDateOfBirthDay(),
-            new PatternGender(),
-            new PatternName(),
-            new PatternPassportNumber(),
-            new PatternPassportSeries(),
-            new PatternPatronymic(),
-            new PatternPhoneNumber(),
-            new PatternSurname(),
+            new PatternCondition1(), new PatternCondition2(), new PatternDateStartOfUse(),
+            new PatternDateEndOfUse(), new PatternDateOfBirthDay(), new PatternGender(),
+            new PatternName(), new PatternPassportNumber(), new PatternPassportSeries(),
+            new PatternPatronymic(), new PatternPhoneNumber(), new PatternSurname(),
             new PatternTariff()
     };
     this.mapPatterns = new HashMap<>();
+
+    validators = new Validator[]{
+            new ValidatorDateEndOfUse(),new ValidatorDateOfBirthDay(),new ValidatorDateStartOfUse(),
+            new ValidatorGender(),new ValidatorName(),new ValidatorPatronymic(),
+            new ValidatorPhoneNumber(),new ValidatorPassportNumber(),new ValidatorPassportSeries(),
+            new ValidatorSurname()
+    };
   }
 
   /**Функция возвращает заполненный SimpleArrayContract<Contract> контрактами из csv файла
@@ -76,6 +78,7 @@ public class CsvOpener implements Opener{
     for(int i = 1;i < csvValues.length;i++){
       Client client = creator.create(csvValues[i]);
       Contract contract = creatorContract.create(csvValues[i],client);
+      checkContract(contract);
       list.add(contract);
     }
     return list;
@@ -121,5 +124,11 @@ public class CsvOpener implements Opener{
     String [][] csvValues = new String[allData.size()][];
     allData.toArray(csvValues);
     return csvValues;
+  }
+
+  private void checkContract(Contract contract){
+    for (Validator v : validators) {
+      v.validate(contract);
+    }
   }
 }

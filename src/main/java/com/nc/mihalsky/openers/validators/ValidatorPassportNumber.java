@@ -18,7 +18,6 @@ public class ValidatorPassportNumber implements Validator {
       error.setMessage(e.getMessage());
       error.setStatus(Status.ERROR);
       error.setTimeStamp(System.currentTimeMillis());
-      return error;
     }
     return error;
   }

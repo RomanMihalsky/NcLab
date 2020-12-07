@@ -18,7 +18,7 @@ public class ValidatorGender implements Validator {
       error.setMessage(e.getMessage());
       error.setStatus(Status.WARNING);
       error.setTimeStamp(System.currentTimeMillis());
-      return error;
+
     }
     return error;
   }
