@@ -29,7 +29,7 @@ public class CsvOpener implements Opener{
   private final TitlePattern[] patterns;
   /**Поле Map, где ключ(название поля в csv) и значение(соответствующий pattern)*/
   private HashMap<String,TitlePattern> mapPatterns;
-
+  /**Поле массив validators*/
   private Validator[] validators;
 
   /**Default constructor заполняет массив patterns новыми значениемя
@@ -126,6 +126,9 @@ public class CsvOpener implements Opener{
     return csvValues;
   }
 
+  /**Функция проверяет контракт
+   * @param contract - контракт
+   */
   private void checkContract(Contract contract){
     for (Validator v : validators) {
       System.out.println(v.validate(contract));

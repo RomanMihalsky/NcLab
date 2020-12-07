@@ -6,7 +6,17 @@ import com.nc.mihalsky.openers.validators.errors.DiscrepancyPatternException;
 import com.nc.mihalsky.openers.validators.errors.PatternError;
 import com.nc.mihalsky.openers.validators.errors.Status;
 
+/**
+ *Класс ValidatorDateEndOfUse проверяет параметр контракта {@link Contract#dateEndOfUse}
+ * @author Roman Mihalsky
+ */
 public class ValidatorDateEndOfUse implements Validator {
+
+  /**
+   *Функция проверяет dateEndOfUse
+   * @param contract - контракт
+   * @return PatternError - данные об ошибке
+   */
   @Override
   public PatternError validate(Contract contract) {
     PatternError error = new PatternError("DateEndOfUse OK ");
