@@ -10,7 +10,7 @@ import com.nc.mihalsky.openers.validators.errors.Status;
 public class ValidatorDateStartOfUse implements Validator {
   @Override
   public PatternError validate(Contract contract) {
-    PatternError error = new PatternError();
+    PatternError error = new PatternError("DateStartOfUse OK");
     try {
       if(!((contract.getDateStartOfUse().toString()).matches(PatternDateStartOfUse.dateStartOfUsePattern))){
         throw new DiscrepancyPatternException("DateStartOfUse doe's not match with pattern");

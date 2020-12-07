@@ -9,7 +9,7 @@ import com.nc.mihalsky.openers.validators.errors.Status;
 public class ValidatorName implements Validator {
   @Override
   public PatternError validate(Contract contract) {
-    PatternError error = new PatternError();
+    PatternError error = new PatternError("Name OK");
     try {
       if(!((contract.getClient().getName()).matches(PatternName.namePattern))){
         throw new DiscrepancyPatternException("Name doe's not match with pattern");

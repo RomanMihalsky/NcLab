@@ -11,6 +11,12 @@ public class PatternError {
     this.timeStamp = System.currentTimeMillis();
   }
 
+  public PatternError(String message){
+    this.status = Status.OK;
+    this.message = message;
+    this.timeStamp = System.currentTimeMillis();
+  }
+
   public PatternError(Status status, String message, long timeStamp) {
     this.status = status;
     this.message = message;

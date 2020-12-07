@@ -9,7 +9,7 @@ import com.nc.mihalsky.openers.validators.errors.Status;
 public class ValidatorDateEndOfUse implements Validator {
   @Override
   public PatternError validate(Contract contract) {
-    PatternError error = new PatternError();
+    PatternError error = new PatternError("DateEndOfUse OK ");
     try {
       if(!((contract.getDateEndOfUse().toString()).matches(PatternDateEndOfUse.dateEndOfUsePattern))){
         throw new DiscrepancyPatternException("DateEndOfUse doe's not match with pattern");

@@ -9,7 +9,7 @@ import com.nc.mihalsky.openers.validators.errors.Status;
 public class ValidatorGender implements Validator {
   @Override
   public PatternError validate(Contract contract) {
-    PatternError error = new PatternError();
+    PatternError error = new PatternError("Gender OK");
     try {
       if(!((contract.getClient().getGender()).matches(PatternGender.genderPattern))){
         throw new DiscrepancyPatternException("Gender doe's not match with pattern");
@@ -18,7 +18,6 @@ public class ValidatorGender implements Validator {
       error.setMessage(e.getMessage());
       error.setStatus(Status.WARNING);
       error.setTimeStamp(System.currentTimeMillis());
-
     }
     return error;
   }

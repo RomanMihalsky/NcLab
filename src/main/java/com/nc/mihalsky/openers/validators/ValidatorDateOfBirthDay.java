@@ -9,7 +9,7 @@ import com.nc.mihalsky.openers.validators.errors.Status;
 public class ValidatorDateOfBirthDay implements Validator {
   @Override
   public PatternError validate(Contract contract) {
-    PatternError error = new PatternError();
+    PatternError error = new PatternError("DateOfBirthDay OK");
     try {
       if(!((contract.getClient().getDateOfBirthDay().toString()).matches(PatternDateOfBirthDay.dateOfBirthDayPattern))){
         throw new DiscrepancyPatternException("DateOfBirthDay doe's not match with pattern");

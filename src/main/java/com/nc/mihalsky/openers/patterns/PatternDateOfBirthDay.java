@@ -8,7 +8,7 @@ public class PatternDateOfBirthDay implements TitlePattern{
   /**Поле позиция поля дата рождения в csv*/
   public static int indexDateOfBirthDay;
   /**Поле шаблон проверки даты рождения*/
-  public static final String dateOfBirthDayPattern = "^\\d{2}\\.\\d{2}\\.\\d{2,4}$";
+  public static final String dateOfBirthDayPattern = "^\\d{2,4}\\-\\d{2}\\-\\d{2}$";
   /**Поле название поля в csv*/
   public static final String dateOfBirthDayTitle = "dateOfBirthDay";
 

@@ -9,7 +9,7 @@ import com.nc.mihalsky.openers.validators.errors.Status;
 public class ValidatorPassportNumber implements Validator {
   @Override
   public PatternError validate(Contract contract) {
-    PatternError error = new PatternError();
+    PatternError error = new PatternError("PassportNumber OK");
     try {
       if(!((""+contract.getClient().getPassportNumber()).matches(PatternPassportNumber.passportNumberPattern))){
         throw new DiscrepancyPatternException("PassportNumber doe's not match with pattern");

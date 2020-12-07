@@ -128,7 +128,8 @@ public class CsvOpener implements Opener{
 
   private void checkContract(Contract contract){
     for (Validator v : validators) {
-      v.validate(contract);
+      System.out.println(v.validate(contract));
     }
+    System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>");
   }
 }

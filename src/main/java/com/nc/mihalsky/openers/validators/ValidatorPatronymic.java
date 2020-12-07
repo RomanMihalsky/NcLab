@@ -9,7 +9,7 @@ import com.nc.mihalsky.openers.validators.errors.Status;
 public class ValidatorPatronymic implements Validator {
   @Override
   public PatternError validate(Contract contract) {
-    PatternError error = new PatternError();
+    PatternError error = new PatternError("Patronymic OK");
     try {
       if(!((contract.getClient().getPatronymic()).matches(PatternPatronymic.patronymicPattern))){
         throw new DiscrepancyPatternException("Patronymic doe's not match with pattern");

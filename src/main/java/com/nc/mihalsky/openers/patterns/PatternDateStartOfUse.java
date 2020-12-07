@@ -8,7 +8,7 @@ public class PatternDateStartOfUse implements TitlePattern{
   /**Поле позиция поля дата создания контракта в csv*/
   public static int indexDateStartOfUse;
   /**Поле шаблон проверки даты создания контракта*/
-  public static final String dateStartOfUsePattern = "^\\d{2}\\.\\d{2}\\.\\d{2,4}$";
+  public static final String dateStartOfUsePattern = "^\\d{2,4}\\-\\d{2}\\-\\d{2}$";
   /**Поле название поля в csv*/
   public static final String dateStartOfUseTitle = "dateStartOfUse";
 

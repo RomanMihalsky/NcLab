@@ -9,7 +9,7 @@ import com.nc.mihalsky.openers.validators.errors.Status;
 public class ValidatorPhoneNumber implements Validator {
   @Override
   public PatternError validate(Contract contract) {
-    PatternError error = new PatternError();
+    PatternError error = new PatternError("PhoneNumber OK");
     try {
       if(!((""+contract.getClient().getPhoneNumber()).matches(PatternPhoneNumber.phoneNumberPattern))){
         throw new DiscrepancyPatternException("PhoneNumber doe's not match with pattern");
